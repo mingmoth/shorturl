@@ -17,10 +17,19 @@
   {{/if}}
   {{#if shorturl}}
   <div class="output mt-2 d-flex align-items-center">
-    <input type="text" placeholder="" value="{{shorturl}}" style="width: 300px; height: 39px;" disabled>
-    <button class="btn btn-warning ml-2" type="submit" style="width: 76.45px; height: 39px;">Copy</button>
+    <input id="output" type="text" placeholder="" value="{{shorturl}}" style="width: 300px; height: 39px;" disabled>
+    <button class="btn btn-warning ml-2" onclick="copy()" style="width: 76.45px; height: 39px;">Copy</button>
   </div>
   {{/if}}
   
 
 </div>
+
+<script>
+  function copy() {
+    const output = document.getElementById('output')
+    output.select()
+    navigator.clipboard.writeText(output.value)
+    alert("Copied the shortUrl: " + output.value);
+  }
+</script>
