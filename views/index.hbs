@@ -5,7 +5,8 @@
   <div class="img"></div>
   <form action="/" method="POST">
     <div class="urlinput mt-3 d-flex align-items-center">
-      <input name="url" id="url" type="text" placeholder="place your url..." style="width: 300px; height: 39px;">
+      <input name="url" id="url" type="text" placeholder="place your url..." style="width: 300px; height: 39px;" required>
+      <div class="invalid-feedback"></div>
       <button class="btn btn-success ml-2" type="submit">Shrink</button>
     </div>
   </form>
